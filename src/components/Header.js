@@ -1,7 +1,8 @@
 import { toggleMenu } from "../Utils/appSlice";
 import { useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
 
-const Head = () => {
+const Header = () => {
   const Dispatch = useDispatch();
 
   const toggleMenuHandler = () => {
@@ -15,10 +16,10 @@ const Head = () => {
         alt="menu"
         src="https://cdn.iconscout.com/icon/free/png-256/free-hamburger-menu-462145.png?f=webp"
       />
-      <img className="h-8 mx-2"
+      <a href="/"><img className="h-8 mx-2"
         alt="youtube_logo"
         src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/YouTube_Logo_2017.svg/1280px-YouTube_Logo_2017.svg.png"
-      />
+      /></a>
     </div>
     <div className="col-span-10 ">
         <input className="w-1/2 p-2 border border-gray-400 rounded-l-full" type="text" placeholder="Search"/>
@@ -31,4 +32,4 @@ const Head = () => {
   )
 };
 
-export default Head;
+export default Header;
